@@ -18,16 +18,16 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: inline-block;
     border: solid 1px white;
     position: absolute;
 }
 
 #milogo {
+    display: inline-block;
     align-items: center;
     justify-content: center;
-    height: 800px;
-    width: 600px;
+    height: 1000px;
+    width: 1000px;
     border: solid 1px orange;
 
     
@@ -39,7 +39,7 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%); 
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     pointer-events: none; 
 }
 

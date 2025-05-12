@@ -46,14 +46,30 @@ html, body {
 }
 
 #Navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 50px;
-    background-color: black;
+    background-color: red;
     color: white;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0; /* Add some padding for better spacing */
+    position: absolute;
+    top: 1400px; /* Position below the logo box */
+    
+}
+
+#Navbar nav p {
+    margin: 0 60px; /* Add spacing between navigation items */
+    font-size: 25px; /* Adjust font size as needed */
+    text-align: center;
+    cursor: pointer;
+}
+#Navbar nav {
+    display: flex; 
     align-items: center;
     justify-content: center;
+}
+
+#Navbar nav p:hover {
+    color: orange; /* Add hover effect */
 }

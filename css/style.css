@@ -1,26 +1,33 @@
-
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; 
-    display: flex;
-    justify-content: center;
+    height: 100%;
     background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; 
+}
 
+
+main {
+    width: 1024px;
+    display: flex;
+    flex-direction: column; 
 }
 
 
 #sigma {
-    width: 1024px;
-    background-color: black;
+    width: 100%;
     height: 1300px;
+    background-color: black;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px white;
-    position: absolute;
+    position: relative; 
 }
+
 
 #milogo {
     display: inline-block;
@@ -28,48 +35,56 @@ html, body {
     justify-content: center;
     height: 1300px;
     width: 100%;
-    border: solid 1px orange;
-
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%); /* Initially off-screen vertically */
+    transition: transform 0.5s ease; /* Smooth transition */
 }
 
-#Turner { 
+
+
+#Turner {
     position: absolute;
-    top: 50%;  
-    left: 49.5%;
-    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 22px;
-    pointer-events: none; 
-
-   
+    pointer-events: none;
 }
 
-#Navbar {
+
+#about-me {
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+
+    margin-top: 0px; 
+}
+
+
+#navbar {
     width: 100%;
     background-color: red;
     color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px 0; /* Add some padding for better spacing */
-    position: absolute;
-    top: 1400px; /* Position below the logo box */
-    
-}
-
-#Navbar nav p {
-    margin: 0 60px; /* Add spacing between navigation items */
-    font-size: 25px; /* Adjust font size as needed */
     text-align: center;
-    cursor: pointer;
-}
-#Navbar nav {
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+    margin-top: 20px; 
 }
 
-#Navbar nav p:hover {
-    color: orange; /* Add hover effect */
+#navbar nav {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+#navbar nav p {
+    margin: 0 40px; 
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#navbar nav p:hover {
+    color: orange; 
 }

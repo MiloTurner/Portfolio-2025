@@ -7,24 +7,49 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- Main Container for the whole site -->
+    <main>
+        <!-- Sigma Container for logo and Turner image -->
         <div id="sigma">
-            <div id="milogo"><img id="milogo" src="Images/milogo@2x.png" alt="Milo Logo">
-            </div>
-                <div id="Turner"><img id="Turner" src="Images/Asset 2@2x.png" alt="Turner">
-                </div> 
-
-                   
+            <div id="milogo"><img id="milogo" src="Images/milogo@2x.png" alt="milogo"></div>
+            <div id="Turner"><img id="Turner" src="Images/Asset 2@2x.png" alt="Turner"></div>
         </div>
-     <div id="Navbar">
-        <nav>
-            <p>About Milo</p>
-            <p>Portfolio</p>
-            <p>Favorites and Influences</p>
-            <p>Contact</p>
-        </nav>
-     </div>
-        
-   
+        <!-- Navigation Bar -->
+        <div id="navbar">
+            <nav>
+                <p>About Milo</p>
+                <p>Portfolio</p>
+                <p>Favorites and Influences</p>
+                <p>Contact</p>
+            </nav>
+        </div>
+       
+       
+        <!-- About Me Section -->
+       
+        <div id="about-me">
+            <h1>About Milo</h1>
+            <p>Milo Turner is a </p>
+        </div>
+
+       
+    </main>
+    <script>
+        // Get the image element
+        const image = document.getElementById('milogo').querySelector('img');
+    
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY; // Get the current scroll position
+            const revealPoint = 100; // Point at which the image should start to reveal
+    
+            if (scrollPosition > revealPoint) {
+                // As the user scrolls, translate the image down
+                image.style.transform = `translate(-50%, ${Math.min((scrollPosition - revealPoint) * 0.3, 100)}%)`; // Limit to 100% max to avoid too much movement
+            } else {
+                // Reset the image to its initial off-screen position
+                image.style.transform = `translate(-50%, -100%)`;
+            }
+        });
+    </script>
 </body>
 </html>

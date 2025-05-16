@@ -27,29 +27,23 @@
        
         <!-- About Me Section -->
        
-        <div id="about-me">
-            <h1>About Milo</h1>
-            <p>Milo Turner is a </p>
-        </div>
+        <div id="about-me-m">
+            <img src="Images/2x/M@2x.png" alt="big-m" height="1102" width="377.5">
+            <div id="about-me">
+                <h1>About Milo</h1>
+                <p>Milo Turner is a fartist from Delawere. </p>
+            </div>
+         </div>
 
+         <!-- portfolho -->
+
+         <div id="Portfolio-I">
+            <img src="Images/2x/I@2x.png" alt="I" height="800px" width="377.5">
+         </div>
+
+        
        
     </main>
-    <script>
-        // Get the image element
-        const image = document.getElementById('milogo').querySelector('img');
-    
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY; // Get the current scroll position
-            const revealPoint = 100; // Point at which the image should start to reveal
-    
-            if (scrollPosition > revealPoint) {
-                // As the user scrolls, translate the image down
-                image.style.transform = `translate(-50%, ${Math.min((scrollPosition - revealPoint) * 0.3, 100)}%)`; // Limit to 100% max to avoid too much movement
-            } else {
-                // Reset the image to its initial off-screen position
-                image.style.transform = `translate(-50%, -100%)`;
-            }
-        });
-    </script>
+   
 </body>
 </html>

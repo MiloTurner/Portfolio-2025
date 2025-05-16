@@ -54,15 +54,6 @@ main {
 }
 
 
-#about-me {
-    width: 100%;
-    background-color: white;
-    color: black;
-    text-align: center;
-
-    margin-top: 0px; 
-}
-
 
 #navbar {
     width: 100%;
@@ -87,4 +78,40 @@ main {
 
 #navbar nav p:hover {
     color: orange; 
+}
+#about-me-m {
+    position: relative;
+    width: 100%;
+    max-width: 377.5px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;  
+}
+
+#about-me-m img {
+    width: 100%;
+    height: 800px;
+    display: block;
+}
+
+#about-me {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+#Portfolio-I {
+    position: relative;
+    width: 100%;
+    max-width: 377.5px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;  
 }

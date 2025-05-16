@@ -108,10 +108,15 @@ main {
 #Portfolio-I {
     position: relative;
     width: 100%;
-    max-width: 377.5px;
+    max-width: 100px;
     margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 800px;  
+}
+#Portfolio-I img {
+    width: 100%;
+    height: 800px;
+    display: block;
 }

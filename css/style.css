@@ -169,7 +169,7 @@ main {
 .reveal-down {
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 3.5s ease-out;
+    transition: transform 4s ease-out;
 }
 
 .reveal-down.revealed {

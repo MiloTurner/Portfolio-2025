@@ -92,7 +92,7 @@
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
                             milogo.classList.add('revealed');
-                            observer.unobserve(entry.target); // Remove if you only want it once
+                            observer.unobserve(entry.target); 
                         }
                     });
                 }, {

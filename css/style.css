@@ -120,3 +120,37 @@ main {
     height: 800px;
     display: block;
 }
+
+#Favorites-L {
+     position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;  
+}
+
+#Favorites-L img {
+    width: 100%;
+    height: 800px;
+    display: block;
+}
+
+#Contact-O {
+      position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;  
+}
+
+#Contact-O img {
+    width: 100%;
+    height: 800px;
+    display: block;
+}

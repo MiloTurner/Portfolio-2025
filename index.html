@@ -11,7 +11,7 @@
     <main>
         <!-- Sigma Container for logo and Turner image -->
         <div id="sigma">
-            <div id="milogo"><img id="milogo" src="Images/milogo@2x.png" alt="milogo"></div>
+            <div id="milogo" class="reveal-down"><img id="milogo" src="Images/milogo@2x.png" alt="milogo"></div>
             <div id="Turner"><img id="Turner" src="Images/Asset 2@2x.png" alt="Turner"></div>
         </div>
         <!-- Navigation Bar -->
@@ -29,7 +29,7 @@
        
         <!-- About Me Section -->
        
-        <div id="about-me-m">
+        <div id="about-me-m" class="fade-in-section">
             <img src="Images/2x/M@2x.png" alt="big-m" height="1102" width="377.5">
             <div id="about-me">
                 <h1>About Milo</h1>
@@ -39,23 +39,68 @@
 
          <!-- portfolho -->
 
-         <div id="Portfolio-I">
+         <div id="Portfolio-I" class="fade-in-section">
             <img src="Images/2x/I@2x.png" alt="I" height="800px" width="377.5">
          </div>
 
          <!-- Favorites and inflences -->
-         <div id="Favorites-L">
+         <div id="Favorites-L" class="fade-in-section">
             <img src="Images/2x/L@2x.png" alt="L">
          </div>
 
          <!-- Contact -->
-         <div id="Contact-O">
+         <div id="Contact-O" class="fade-in-section">
             <img src="Images/2x/O@2x.png" alt="O">
 
          </div>
 
        
     </main>
-   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faders = document.querySelectorAll('.fade-in-section');
+        
+            const appearOptions = {
+                threshold: 0.1, // Trigger when 10% of the element is visible
+                rootMargin: "0px 0px -50px 0px"
+            };
+        
+            const appearOnScroll = new IntersectionObserver(function (
+                entries,
+                appearOnScroll
+            ) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add("is-visible");
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+        
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const milogo = document.querySelector('#milogo');
+            
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            milogo.classList.add('revealed');
+                            observer.unobserve(entry.target); // Remove if you only want it once
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+            
+                observer.observe(milogo);
+            });
+            </script>
 </body>
 </html>

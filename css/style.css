@@ -68,6 +68,8 @@ main {
     align-items: center; 
 }
 
+
+
 #navbar nav p {
     margin: 0 40px; 
     font-size: 25px;
@@ -119,7 +121,22 @@ main {
     height: 800px;
     display: block;
 }
+.portfolio-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; 
+}
 
+.center-img {
+    width: 377.5px;
+    height: 800px;
+}
+
+.side-img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
 
 #Favorites-L {
      position: relative;
